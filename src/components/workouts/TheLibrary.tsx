@@ -10,7 +10,7 @@ const TheLibrary = async () => {
 			className="bg-black text-white my-8 lg:my-16 py-8"
 		>
 			<div className="container mx-auto w-11/12">
-				<header className="mb-6">
+				<header className="mb-6 space-y-3">
 					<h2 className="text-3xl font-bold">THE LIBRARY</h2>
 					<p>Twelve lifts covering every major muscle group.</p>
 				</header>

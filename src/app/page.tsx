@@ -6,8 +6,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 export const showSuccessToast = (message: string) => {
 	toast.success(message, {
-		position: "top-center",
-		autoClose: 2000,
+		position: "top-right",
+		autoClose: 1500,
 		hideProgressBar: false,
 		closeOnClick: false,
 		pauseOnHover: true,
@@ -19,8 +19,8 @@ export const showSuccessToast = (message: string) => {
 };
 export const showInfoToast = (message: string) => {
 	toast.info(message, {
-		position: "top-center",
-		autoClose: 2000,
+		position: "top-right",
+		autoClose: 1500,
 		hideProgressBar: false,
 		closeOnClick: false,
 		pauseOnHover: true,
