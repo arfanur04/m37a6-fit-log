@@ -8,7 +8,7 @@ import NavSaveBtn from "./NavSaveBtn";
 const Navbar = () => {
 	return (
 		<section className="bg-black text-white">
-			<div className="navbar shadow-sm container mx-auto w-11/12">
+			<div className="navbar shadow-sm container mx-auto w-11/12 pl-0">
 				<div className="navbar-start">
 					<div className="dropdown">
 						<div
@@ -42,7 +42,7 @@ const Navbar = () => {
 					</div>
 					<Link
 						href={"/"}
-						className="btn btn-ghost text-xl"
+						className="btn btn-ghost text-xl pl-0"
 					>
 						<Image
 							src={logo}

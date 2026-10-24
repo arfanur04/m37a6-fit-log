@@ -1,6 +1,10 @@
+"use client";
+import { useFitLog } from "@/hooks/useFitLog";
 import Link from "next/link";
 
 const NavPlanBtn = () => {
+	const { planLog } = useFitLog();
+
 	return (
 		<Link
 			href={"/my-plan"}
@@ -8,7 +12,7 @@ const NavPlanBtn = () => {
 		>
 			Plan
 			<span className="badge border-fl-primary bg-fl-primary rounded-full text-black">
-				0
+				{planLog.length}
 			</span>
 		</Link>
 	);

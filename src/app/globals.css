@@ -22,3 +22,7 @@
 @utility active {
 	@apply text-fl-primary;
 }
+
+@utility fl-primary-btn {
+	@apply btn bg-fl-primary text-black hover:bg-lime-500;
+}
