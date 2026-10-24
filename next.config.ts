@@ -15,6 +15,9 @@ const nextConfig: NextConfig = {
 	images: {
 		remotePatterns: [{ protocol: "https", hostname: "**" }],
 	},
+	async redirects() {
+		return [{ source: "/workouts", destination: "/", permanent: false }];
+	},
 };
 
 export default nextConfig;

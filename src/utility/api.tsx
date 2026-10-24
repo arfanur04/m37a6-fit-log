@@ -13,3 +13,15 @@ export const getWorkouts = async (): Promise<IFitLog[]> => {
 		return [];
 	}
 };
+
+export const getWorkoutById = async (id: string): Promise<IFitLog> => {
+	try {
+		const res = await fetch(`${BASE_URL}/${id}`, {
+			cache: "force-cache",
+		});
+		return res.json();
+	} catch (error) {
+		console.error(`Error fetching workouts: ${error}`);
+		return {} as IFitLog;
+	}
+};

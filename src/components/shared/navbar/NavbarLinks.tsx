@@ -10,7 +10,7 @@ const NavbarLinks = () => {
 			<li>
 				<Link
 					href={`/`}
-					className={`${pathname === "/" ? "active" : ""}`}
+					className={`${pathname === "/" || pathname === "/workouts" ? "active" : ""}`}
 				>
 					Workouts
 				</Link>

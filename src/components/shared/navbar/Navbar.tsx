@@ -7,7 +7,7 @@ import NavSaveBtn from "./NavSaveBtn";
 
 const Navbar = () => {
 	return (
-		<section className="bg-black text-white">
+		<section className="bg-black text-white sticky top-0 z-50">
 			<div className="navbar shadow-sm container mx-auto w-11/12 pl-0">
 				<div className="navbar-start">
 					<div className="dropdown">

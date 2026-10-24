@@ -9,7 +9,7 @@ interface ITheLibraryCardProps {
 const TheLibraryCard = ({ workout }: ITheLibraryCardProps) => {
 	return (
 		<Link
-			href={`/workout/${workout.id}`}
+			href={`/workouts/${workout.id}`}
 			className="card overflow-hidden rounded-2xl border border-white/10 bg-[#14151a] transition hover:-translate-y-1 hover:border-[#ccff00]/40"
 		>
 			{/* Image */}
