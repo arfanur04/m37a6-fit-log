@@ -47,6 +47,7 @@ const Navbar = () => {
 						<Image
 							src={logo}
 							alt="logo"
+							loading="lazy"
 						/>
 						FIT{""}LOG
 					</Link>

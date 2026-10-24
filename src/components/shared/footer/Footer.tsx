@@ -17,6 +17,7 @@ const Footer = () => {
 							alt="FitLog"
 							width={20}
 							height={20}
+							loading="lazy"
 							className="-rotate-45"
 						/>
 						<span className="font-display text-sm font-bold tracking-wide text-white">
