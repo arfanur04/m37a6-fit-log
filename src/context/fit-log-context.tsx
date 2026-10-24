@@ -1,17 +1,23 @@
 "use client";
-import { IFitLog } from "@/types/fit-log";
-import { createContext, useState } from "react";
+import { IFitLog } from "@/types/fit-log-types";
+import {
+	createContext,
+	Dispatch,
+	ReactNode,
+	SetStateAction,
+	useState,
+} from "react";
 
 interface IFitLogContext {
 	planLog: IFitLog[];
-	setPlanLog: React.Dispatch<React.SetStateAction<IFitLog[]>>;
+	setPlanLog: Dispatch<SetStateAction<IFitLog[]>>;
 	savedLog: IFitLog[];
-	setSavedLog: React.Dispatch<React.SetStateAction<IFitLog[]>>;
+	setSavedLog: Dispatch<SetStateAction<IFitLog[]>>;
 }
 export const FitLogContext = createContext<IFitLogContext | null>(null);
 
 interface IFitLogProviderProps {
-	children: React.ReactNode;
+	children: ReactNode;
 }
 const FitLogProvider = ({ children }: IFitLogProviderProps) => {
 	const [planLog, setPlanLog] = useState<IFitLog[]>([]);
