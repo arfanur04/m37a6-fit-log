@@ -1,3 +1,4 @@
+import BackButton from "@/components/shared/BackButton";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -11,12 +12,16 @@ const NotFound = () => {
 		<div className="flex justify-center items-center flex-col my-12 space-y-2">
 			<h1>404 - Page Not Found</h1>
 			<p>This page does not exist.</p>
-			<Link
-				className="cursor-pointer underline"
-				href={"/"}
-			>
-				Back to Workout
-			</Link>
+
+			<div className="flex items-center gap-3 pt-2">
+				<BackButton />
+				<Link
+					className="cursor-pointer underline"
+					href={"/"}
+				>
+					Back to Workout
+				</Link>
+			</div>
 		</div>
 	);
 };
