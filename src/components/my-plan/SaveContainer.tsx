@@ -1,12 +1,10 @@
-"use client";
-import { useFitLog } from "@/hooks/useFitLog";
 import SaveCard from "./SaveCard";
+import { IFitLog } from "@/types/fit-log-types";
 
-const SaveContainer = () => {
-	const { savedLog } = useFitLog();
+const SaveContainer = ({ workoutsToShow }: { workoutsToShow: IFitLog[] }) => {
 	return (
 		<section className="flex flex-col gap-6">
-			{savedLog.map((workout) => (
+			{workoutsToShow.map((workout) => (
 				<SaveCard
 					key={workout.id}
 					workout={workout}
