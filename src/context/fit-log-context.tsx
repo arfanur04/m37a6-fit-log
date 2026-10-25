@@ -16,6 +16,8 @@ interface IFitLogContext {
 	// /my-plan summary metrics row
 	summaryRow: IFitLog[];
 	setSummaryRow: Dispatch<SetStateAction<IFitLog[]>>;
+	markDoneLog: IFitLog[];
+	setMarkDoneLog: Dispatch<SetStateAction<IFitLog[]>>;
 }
 export const FitLogContext = createContext<IFitLogContext | null>(null);
 
@@ -27,6 +29,7 @@ const FitLogProvider = ({ children }: IFitLogProviderProps) => {
 	const [savedLog, setSavedLog] = useState<IFitLog[]>([]);
 	// /my-plan summary metrics row
 	const [summaryRow, setSummaryRow] = useState<IFitLog[]>([]);
+	const [markDoneLog, setMarkDoneLog] = useState<IFitLog[]>([]);
 
 	const sharedData = {
 		planLog,
@@ -36,6 +39,8 @@ const FitLogProvider = ({ children }: IFitLogProviderProps) => {
 		// /my-plan summary metrics row
 		summaryRow,
 		setSummaryRow,
+		markDoneLog,
+		setMarkDoneLog,
 	};
 
 	return (

@@ -1,3 +1,4 @@
+import { showInfoToast } from "@/app/page";
 import { useFitLog } from "@/hooks/useFitLog";
 import { IFitLog } from "@/types/fit-log-types";
 import { X } from "lucide-react";
@@ -11,6 +12,7 @@ const SaveDeleteBtn = ({ workout }: ISaveDeleteBtnProps) => {
 	const handleDelete = () => {
 		setSavedLog((prev) => prev.filter((item) => item.id !== workout.id));
 		setSummaryRow((prev) => prev.filter((item) => item.id !== workout.id));
+		showInfoToast(`"${workout.name}" deleted successfully`);
 	};
 
 	return (

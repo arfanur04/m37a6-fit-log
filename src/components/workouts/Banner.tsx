@@ -33,7 +33,7 @@ const Banner = () => {
 						<Image
 							src={banner}
 							alt="banner"
-							loading="lazy"
+							loading="eager"
 						/>
 					</figure>
 				</div>

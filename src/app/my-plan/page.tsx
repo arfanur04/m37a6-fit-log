@@ -1,10 +1,11 @@
 "use client";
 import PlanContainer from "@/components/my-plan/PlanContainer";
-import MPSummary from "@/components/my-plan/MPSummary";
+import Summary from "@/components/my-plan/Summary";
 import SaveContainer from "@/components/my-plan/SaveContainer";
 import { useFitLog } from "@/hooks/useFitLog";
 import { useEffect, useState } from "react";
 import { IFitLog } from "@/types/fit-log-types";
+import EmptyLog from "@/components/my-plan/EmptyLog";
 
 type Tab = "plan" | "saved";
 type SortBy = "duration" | "calories" | "rating";
@@ -24,13 +25,15 @@ const MyPlanPage = () => {
 	}, [planLog, savedLog, setSummaryRow, tab]);
 
 	const sortedWorkouts = (workouts: IFitLog[]): IFitLog[] => {
-		const sorted = [...workouts].sort((a, b) =>
-			sortBy === "duration"
-				? b.duration - a.duration
-				: sortBy === "calories"
-					? b.caloriesBurned - a.caloriesBurned
-					: b.rating - a.rating,
-		);
+		const sorted = [...workouts].sort((a, b) => {
+			if (sortBy === "duration") {
+				return b.duration - a.duration;
+			} else if (sortBy === "calories") {
+				return b.caloriesBurned - a.caloriesBurned;
+			} else {
+				return b.rating - a.rating;
+			}
+		});
 		return sorted;
 	};
 
@@ -45,7 +48,7 @@ const MyPlanPage = () => {
 					<p>Cap of five lifts for today. Finish them, then load more.</p>
 				</header>
 				<main className="flex flex-col gap-6">
-					<MPSummary />
+					<Summary />
 					<div className="flex flex-wrap items-center justify-between gap-3">
 						{/* Tabs */}
 						<div
@@ -84,10 +87,16 @@ const MyPlanPage = () => {
 					</div>
 
 					{/* Content below the row */}
-					{tab === "plan" ? (
-						<PlanContainer workoutsToShow={workoutsToShow} />
+					{workoutsToShow.length !== 0 ? (
+						<>
+							{tab === "plan" ? (
+								<PlanContainer workoutsToShow={workoutsToShow} />
+							) : (
+								<SaveContainer workoutsToShow={workoutsToShow} />
+							)}
+						</>
 					) : (
-						<SaveContainer workoutsToShow={workoutsToShow} />
+						<EmptyLog />
 					)}
 				</main>
 			</div>

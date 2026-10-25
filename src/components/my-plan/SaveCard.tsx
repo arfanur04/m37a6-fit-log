@@ -11,7 +11,7 @@ const SaveCard = ({ workout }: IMPPlanCardProps) => {
 	return (
 		<div className="flex flex-col gap-4 rounded-2xl border border-white/10 bg-[#14161d] p-4 sm:flex-row sm:items-center sm:justify-between sm:px-5">
 			{/* Left: thumbnail + info */}
-			<div className="flex items-center gap-4">
+			<div className="flex flex-col lg:flex-row lg:items-center gap-4">
 				<Image
 					src={workout.image}
 					alt={workout.name}

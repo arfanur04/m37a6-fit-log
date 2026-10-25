@@ -1,7 +1,7 @@
 "use client";
 import { useFitLog } from "@/hooks/useFitLog";
 
-const MPSummary = () => {
+const Summary = () => {
 	const { summaryRow } = useFitLog();
 
 	const totalMinutes = summaryRow
@@ -36,4 +36,4 @@ const MPSummary = () => {
 	);
 };
 
-export default MPSummary;
+export default Summary;

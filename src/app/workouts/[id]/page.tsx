@@ -32,7 +32,7 @@ const WorkoutDetailsPage = async ({ params }: IWorkoutDetailsPageProps) => {
 							src={workout.image}
 							alt={workout.name}
 							fill
-							loading="lazy"
+							loading="eager"
 							sizes="(min-width: 1024px) 50vw, 100vw"
 							className="object-cover"
 						/>
