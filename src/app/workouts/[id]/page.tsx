@@ -2,6 +2,7 @@ import WAddBtn from "@/components/workouts/WAddBtn";
 import WSaveBtn from "@/components/workouts/WSaveBtn";
 import { getWorkoutById } from "@/utility/api";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
 interface IWorkoutDetailsPageProps {
 	params: Promise<{
@@ -11,6 +12,7 @@ interface IWorkoutDetailsPageProps {
 const WorkoutDetailsPage = async ({ params }: IWorkoutDetailsPageProps) => {
 	const { id } = await params;
 	const workout = await getWorkoutById(id);
+	if (!workout) return notFound();
 
 	const specs = [
 		{ label: "Equipment", value: workout.equipment },

@@ -1,7 +1,7 @@
 "use client";
-import { showInfoToast, showSuccessToast } from "@/app/page";
 import { useFitLog } from "@/hooks/useFitLog";
 import { IFitLog } from "@/types/fit-log-types";
+import { showInfoToast } from "@/utility/api";
 import { X } from "lucide-react";
 
 interface IPlanDeleteBtnProps {

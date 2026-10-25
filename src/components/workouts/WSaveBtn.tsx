@@ -1,7 +1,7 @@
 "use client";
-import { showInfoToast, showSuccessToast } from "@/app/page";
 import { useFitLog } from "@/hooks/useFitLog";
 import { IFitLog } from "@/types/fit-log-types";
+import { showInfoToast, showSuccessToast } from "@/utility/api";
 import { Bookmark } from "lucide-react";
 
 interface IWSaveBtnProps {

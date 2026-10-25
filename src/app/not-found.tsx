@@ -19,7 +19,7 @@ const NotFound = () => {
 					className="cursor-pointer underline"
 					href={"/"}
 				>
-					Back to Workout
+					Back to Workouts
 				</Link>
 			</div>
 		</div>

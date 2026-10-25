@@ -18,7 +18,6 @@
 - **daisyUI** - ready-made components for Tailwind
 - **Lucide React** - for icons
 - **FitLog API** - to get the workout data
-- **localStorage** - to keep the plan and saved data after page reload
 
 ---
 

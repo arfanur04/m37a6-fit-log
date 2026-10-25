@@ -1,7 +1,7 @@
 "use client";
-import { showSuccessToast } from "@/app/page";
 import { useFitLog } from "@/hooks/useFitLog";
 import { IFitLog } from "@/types/fit-log-types";
+import { showSuccessToast } from "@/utility/api";
 import { Check } from "lucide-react";
 
 const PlanMarkBtn = ({ workout }: { workout: IFitLog }) => {

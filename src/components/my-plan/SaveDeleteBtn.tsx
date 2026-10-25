@@ -1,6 +1,6 @@
-import { showInfoToast } from "@/app/page";
 import { useFitLog } from "@/hooks/useFitLog";
 import { IFitLog } from "@/types/fit-log-types";
+import { showInfoToast } from "@/utility/api";
 import { X } from "lucide-react";
 
 interface ISaveDeleteBtnProps {
