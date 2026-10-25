@@ -4,9 +4,9 @@
 
 **FitLog** is a website where you can see many workouts. You can pick the ones you like, add them to today's plan, save others for later, and mark them as done.
 
-:link: **Live Site:** [your-live-link-here](https://your-live-link-here)
+:link: **Live Site:** [your-live-link-here](https://m37a6-fit-log.vercel.app)
 
-:package: **Repository:** [github.com/your-username/your-repo-name](https://github.com/your-username/your-repo-name)
+:package: **Repository:** [github.com/arfanur04/m37a6-fit-log](https://github.com/arfanur04/m37a6-fit-log)
 
 ---
 
