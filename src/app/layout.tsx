@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 			data-theme="dark"
 			className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
 		>
-			<body className="min-h-full flex flex-col">
+			<body className="min-h-full flex flex-col bg-black">
 				<FitLogProvider>
 					<Navbar />
 					<main className="flex-1">{children}</main>

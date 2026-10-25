@@ -1,5 +1,5 @@
 "use client";
-import { IFitLog } from "@/types/fit-log-types";
+import { IFitLog, TSortBy, TTab } from "@/types/fit-log-types";
 import {
 	createContext,
 	Dispatch,
@@ -18,6 +18,11 @@ interface IFitLogContext {
 	setSummaryRow: Dispatch<SetStateAction<IFitLog[]>>;
 	markDoneLog: IFitLog[];
 	setMarkDoneLog: Dispatch<SetStateAction<IFitLog[]>>;
+	// tab sort
+	tab: TTab;
+	setTab: Dispatch<SetStateAction<TTab>>;
+	sortBy: TSortBy;
+	setSortBy: Dispatch<SetStateAction<TSortBy>>;
 }
 export const FitLogContext = createContext<IFitLogContext | null>(null);
 
@@ -30,6 +35,9 @@ const FitLogProvider = ({ children }: IFitLogProviderProps) => {
 	// /my-plan summary metrics row
 	const [summaryRow, setSummaryRow] = useState<IFitLog[]>([]);
 	const [markDoneLog, setMarkDoneLog] = useState<IFitLog[]>([]);
+	// tab sort
+	const [tab, setTab] = useState<TTab>("plan");
+	const [sortBy, setSortBy] = useState<TSortBy>("duration");
 
 	const sharedData = {
 		planLog,
@@ -41,6 +49,11 @@ const FitLogProvider = ({ children }: IFitLogProviderProps) => {
 		setSummaryRow,
 		markDoneLog,
 		setMarkDoneLog,
+		// tab sort
+		tab,
+		setTab,
+		sortBy,
+		setSortBy,
 	};
 
 	return (

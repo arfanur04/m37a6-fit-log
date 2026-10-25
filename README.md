@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FitLog
 
-## Getting Started
+> A simple dark gym companion to find workouts and plan your day.
 
-First, run the development server:
+**FitLog** is a website where you can see many workouts. You can pick the ones you like, add them to today's plan, save others for later, and mark them as done.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+:link: **Live Site:** [your-live-link-here](https://your-live-link-here)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+:package: **Repository:** [github.com/your-username/your-repo-name](https://github.com/your-username/your-repo-name)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## :hammer_and_wrench: Technologies Used
 
-## Learn More
+- **Next.js** (App Router, with TypeScript) - to build the user interface and handle page navigation
+- **React.js** - to make the components and manage state
+- **Tailwind CSS** - to style the website
+- **daisyUI** - ready-made components for Tailwind
+- **Lucide React** - for icons
+- **FitLog API** - to get the workout data
+- **localStorage** - to keep the plan and saved data after page reload
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## :sparkles: Key Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Workout library** - All workouts from the API are shown as cards in a 3x4 grid on large screens. Each card shows the image, category tags, name, equipment, and a stats row with duration, calories and rating. Click a card to open its details page.
+2. **Workout details page** - See a big image, description, category tags, key specs (equipment, difficulty, sets, reps, duration, calories, rating) and step-by-step instructions.
+3. **Add to plan and save for later** - Add a workout to "Today's Plan" or save it for later. The "Plan" and "Saved" badges in the navbar update at once, and a toast message shows for every action.
+4. **My Plan page** - See live numbers for Exercises, Minutes and Calories. Switch between "Today's Plan" and "Saved" tabs, and sort the list by Duration, Calories or Rating. An empty message shows when the list is empty.
+5. **Mark as Done and Remove** - Each card in My Plan has a "Mark as Done" button and a Remove (X) button. The workout is updated or removed, and a toast message shows.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---

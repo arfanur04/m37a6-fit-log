@@ -13,3 +13,7 @@ export interface IFitLog {
 	description: string;
 	instructions: string[];
 }
+
+export type TTab = "plan" | "saved";
+
+export type TSortBy = "duration" | "calories" | "rating";

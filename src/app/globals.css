@@ -26,3 +26,8 @@
 @utility fl-primary-btn {
 	@apply btn bg-fl-primary text-black hover:bg-lime-500;
 }
+
+html {
+	scrollbar-gutter: stable;
+	scrollbar-width: thin;
+}

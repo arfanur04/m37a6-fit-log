@@ -1,9 +1,9 @@
-const MyPlanLoading = () => {
+const Loading = () => {
 	return (
-		<section className="text-center py-12">
+		<section className="py-12 text-center">
 			<h2>Loading workouts…</h2>
 		</section>
 	);
 };
 
-export default MyPlanLoading;
+export default Loading;
